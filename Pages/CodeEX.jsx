@@ -138,7 +138,7 @@ function CodeEX() {
 
   async function fetchData(currentInstruction) {
     setLoading(true);
-    const response = await axios.post('http://localhost:5000/ai/get-response', { code , instruction : currentInstruction  });
+    const response = await axios.post('https://backend-2-hf50.onrender.com', { code , instruction : currentInstruction  });
     setReview(response.data);
     setLoading(false);
   }
